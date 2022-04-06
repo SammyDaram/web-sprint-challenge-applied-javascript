@@ -82,12 +82,67 @@ const cardAppender = (selector) => {
         
         //cardList = document.createElement("div");
         //cardList.classList.add("tab");
-        const myArticle = new article(card.headline, card.authorPhoto, card.authorPhoto)
+        const myArticle = new article(card.headline, card.authorPhoto, card.authorName)
+        console.log(myArticle.authorName + ' -- ' + myArticle.headline)
         //cardList.textContent = card;
-        const thisCard = new Card(myArticle);
+        
+        const thisCard = Card(myArticle);
 
         myCards.appendChild(thisCard);
       });
+
+      res.data.articles.bootstrap.forEach((card) => {
+        
+        //cardList = document.createElement("div");
+        //cardList.classList.add("tab");
+        const myArticle = new article(card.headline, card.authorPhoto, card.authorName)
+        console.log(myArticle.authorName + ' -- ' + myArticle.headline)
+        //cardList.textContent = card;
+        
+        const thisCard = Card(myArticle);
+
+        myCards.appendChild(thisCard);
+      });
+
+      res.data.articles.technology.forEach((card) => {
+        
+        //cardList = document.createElement("div");
+        //cardList.classList.add("tab");
+        const myArticle = new article(card.headline, card.authorPhoto, card.authorName)
+        console.log(myArticle.authorName + ' -- ' + myArticle.headline)
+        //cardList.textContent = card;
+        
+        const thisCard = Card(myArticle);
+
+        myCards.appendChild(thisCard);
+      }); 
+      
+      res.data.articles.jquery.forEach((card) => {
+        
+        //cardList = document.createElement("div");
+        //cardList.classList.add("tab");
+        const myArticle = new article(card.headline, card.authorPhoto, card.authorName)
+        //console.log(myArticle.authorName + ' -- ' + myArticle.headline)
+        //cardList.textContent = card;
+        
+        const thisCard = Card(myArticle);
+
+        myCards.appendChild(thisCard);
+      });   
+
+      res.data.articles.node.forEach((card) => {
+        
+        //cardList = document.createElement("div");
+        //cardList.classList.add("tab");
+        const myArticle = new article(card.headline, card.authorPhoto, card.authorName)
+        //console.log(myArticle.authorName + ' -- ' + myArticle.headline)
+        //cardList.textContent = card;
+        
+        const thisCard = Card(myArticle);
+
+        myCards.appendChild(thisCard);
+      });   
+
     })
     .catch((err) => {
       console.error(err);

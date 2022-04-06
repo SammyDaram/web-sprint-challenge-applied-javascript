@@ -15,6 +15,7 @@ import axios from "axios";
 //
 const Tabs = (topics) => {
   const topic = document.createElement("div");
+  //topicList.classList.add("topics");
   var topicList;
   for (var i = 0; i < topics.length; i++) {
     //topic.appendChild(
