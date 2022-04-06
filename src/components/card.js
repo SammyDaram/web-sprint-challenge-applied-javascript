@@ -72,7 +72,7 @@ const cardAppender = (selector) => {
   //var tabsList;
 
   axios
-    .get("http://localhost:5001/api/articles")
+    .get(`http://localhost:5001/api/articles`)
     .then((res) => {
       console.log(res.data.topics);
       //tabsList = res.data.topics;

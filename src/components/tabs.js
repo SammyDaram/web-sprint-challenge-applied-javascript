@@ -40,7 +40,7 @@ const tabsAppender = (selector) => {
   //var tabsList;
 
   axios
-    .get("http://localhost:5001/api/topics")
+    .get(`http://localhost:5001/api/topics`)
     .then((res) => {
       console.log(res.data.topics);
       //tabsList = res.data.topics;
